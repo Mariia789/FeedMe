@@ -16,7 +16,7 @@ const products = [
     { id: 13, title: "Сирні палички", price: 120, image: "https://pizzalife.ua/files/images/111/2/%D1%81%D1%8B%D1%80%D0%BD%D1%8B%D0%B5%20%D0%BF%D0%B0%D0%BB%D0%BE%D1%87%D0%BA%D0%B8.jpg", category: "snacks" },
 
     { id: 14, title: "Суші сет", price: 250, image: "https://sushi-pizza39.com.ua/image/cache/catalog/2025photo/sets/pop-700x700.jpg", category: "sushi" },
-    { id: 15, title: "Філадельфія рол", price: 210, image: "https://sushiholl.com.ua/wp-content/uploads/2018/11/filadelfiya.jpg", category: "sushi" },
+    { id: 15, title: "Філадельфія рол", price: 210, image: "https://sushi-island.com.ua/wp-content/uploads/2025/07/1000h668_filadelfiya-klasichna.png", category: "sushi" },
     { id: 16, title: "Каліфорнія рол", price: 200, image: "https://sushi-island.com.ua/wp-content/uploads/2025/07/1000h668_kaliforniya-v-kunzhuti.png", category: "sushi" },
 
     { id: 17, title: "Паста Карбонара", price: 170, image: "https://klopotenko.com/wp-content/uploads/2018/10/Pasta-Karbonara_siteWEbUkr.jpg", category: "pasta" },
