@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="menu.css">
+	<title>Меню</title>
+</head>
+<body>
+
+
+	<header class="header">
+
+        <a href="index.html" class="logo">
+    <img src="https://feedmefinefoods.ca/wp-content/uploads/2021/11/FeedMeFF2-Logo-Vector-1.png" alt="FeedMe">
+</a>
+
+<div class="header-rating">
+    ⭐ 4.9 | 10 000+ задоволених клієнтів
+</div>
+
+    <nav>
+        <ul class="nav-list">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="menu.html">Меню</a></li>
+            <li><a href="cart.html">Кошик</a></li>
+        </ul>
+    </nav>
+
+    <a href="cart.html" class="cart-icon">
+    🛒
+    <span id="cart-count">0</span>
+</a>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h2 class="taste">Смачна їжа прямо до тебе</h2>
+        <p class="taste1">Замовляй улюблені страви швидко та легко</p>
+        <a href="cart.html" class="btn">Перейти в кошик</a>
+    </div>
+</section>
+
+<div class="filters">
+
+    <!-- пошук -->
+    <input type="text" id="search-input" placeholder="Пошук страв">
+
+    <!-- категорія -->
+    <select id="category-filter">
+        <option value="all">Всі категорії</option>
+        <option value="pizza">Піца</option>
+        <option value="burger">Бургери</option>
+        <option value="snacks">Закуски</option>
+        <option value="sushi">Суші</option>
+        <option value="pasta">Паста</option>
+        <option value="salad">Салати</option>
+        <option value="main">Основні</option>
+        <option value="dessert">Десерти</option>
+        <option value="drink">Напої</option>
+    </select>
+
+    <input type="number" id="min-price-input" placeholder="Мінімальна ціна">
+
+</div>
+
+<main class="menu">
+
+    <section class="category">
+        <h2>🍕 Піца</h2>
+        <div id="pizza-container" class="grid"></div>
+    </section>
+
+    <section class="category">
+        <h2>🍔 Бургери</h2>
+        <div id="burger-container" class="grid"></div>
+    </section>
+
+    <section class="category">
+        <h2>🍟 Закуски</h2>
+        <div id="snacks-container" class="grid"></div>
+    </section>
+
+    <section class="category">
+        <h2>🍣 Суші</h2>
+        <div id="sushi-container" class="grid"></div>
+    </section>
+
+    <section class="category">
+        <h2>🍝 Паста</h2>
+        <div id="pasta-container" class="grid"></div>
+    </section>
+
+    <section class="category">
+        <h2>🥗 Салати</h2>
+        <div id="salad-container" class="grid"></div>
+    </section>
+
+    <section class="category">
+        <h2>🍖 Основні страви</h2>
+        <div id="main-container" class="grid"></div>
+    </section>
+
+    <section class="category">
+        <h2>🍰 Десерти</h2>
+        <div id="dessert-container" class="grid"></div>
+    </section>
+
+    <section class="category">
+        <h2>🥤 Напої</h2>
+        <div id="drink-container" class="grid"></div>
+    </section>
+
+</main>
+
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h4>© 2026 FeedMe</h4>
+      <p>Всі права захищені.</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Контакти</h4>
+      <p>Email: FeedMe@example.com</p>
+      <p>Телефон: +380 67 232 71 77</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Соцмережі</h4>
+      <p><a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">TikTok</a></p>
+    </div>
+
+  </div>
+
+
+</footer>
+
+<div id="toast" class="toast"></div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="cart.css">
+	<title>Кошик</title>
+</head>
+<body>
+
+	<header class="header">
+
+        <a href="index.html" class="logo">
+    <img src="https://feedmefinefoods.ca/wp-content/uploads/2021/11/FeedMeFF2-Logo-Vector-1.png" alt="FeedMe">
+</a>
+
+<div class="header-rating">
+    ⭐ 4.9 | 10 000+ задоволених клієнтів
+</div>
+
+    <nav>
+        <ul class="nav-list">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="menu.html">Меню</a></li>
+            <li><a href="cart.html">Кошик</a></li>
+        </ul>
+    </nav>
+
+    <a href="cart.html" class="cart-icon">
+    🛒
+    <span id="cart-count">0</span>
+</a>
+</header>
+
+
+
+<section class="hero">
+    <div class="hero-content">
+        <h2 class="taste">Смачна їжа прямо до тебе</h2>
+        <p class="taste1">Замовляй улюблені страви швидко та легко</p>
+        <a href="menu.html" class="btn">Назад до меню</a>
+    </div>
+</section>
+
+
+<main class="cart-page">
+
+    <div id="cart-container" class="cart-container"></div>
+
+    <h2 id="total-price">Загальна сума: 0 грн</h2>
+
+    <button id="checkout-btn" class="checkout-btn">Оплатити</button>
+
+</main>
+
+<!-- модальне вікно -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <h2>Оформлення замовлення</h2>
+
+        <input type="text" placeholder="Ім'я">
+        <input type="text" placeholder="Телефон">
+        <input type="text" placeholder="Адреса">
+
+        <button id="confirm-order">Підтвердити</button>
+    </div>
+</div>
+
+
+
+
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h4>© 2026 FeedMe</h4>
+      <p>Всі права захищені.</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Контакти</h4>
+      <p>Email: FeedMe@example.com</p>
+      <p>Телефон: +380 67 232 71 77</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Соцмережі</h4>
+      <p><a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">TikTok</a></p>
+    </div>
+
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

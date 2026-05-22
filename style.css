@@ -1,0 +1,598 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* менша висота хедера */
+    padding: 10px 30px;
+
+    background: black;
+    color: white;
+}
+
+/* Логотип-картинка */
+.header img {
+    height: 80px;      /* розмір логотипа */
+    width: auto;
+    display: block;
+}
+
+/* Меню */
+.nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Посилання */
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+
+    /* внутрішні відступи для красивого hover */
+    padding: 8px 14px;
+
+    transition: 0.3s;
+}
+
+/* Гарний ефект при наведенні */
+.nav-list a:hover {
+    background: orange;
+    color: black;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 165, 0, 0.4);
+}
+
+/* Активне натискання */
+.nav-list a:active {
+    transform: scale(0.95);
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+    background: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836")
+        center/cover no-repeat;
+    color: white;
+    text-align: center;
+
+    /* Менша висота hero */
+    min-height: 450px;
+
+    /* Центрування тексту */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+/* Текст всередині hero */
+.hero-content {
+    max-width: 700px;
+}
+
+.taste {
+    font-size: 40px;
+}
+
+.taste1 {
+    font-size: 24px;
+}
+
+/* =========================
+   КНОПКА
+========================= */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 28px;
+    background: orange;
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+
+.about {
+    background: white;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: black;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 0 auto;
+
+    font-size: 22px;
+    line-height: 1.8;
+
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 5px solid orange;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.about p:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+.popular-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid orange;
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.advantages {
+    background: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.advantages h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: black;
+}
+
+/* Сітка */
+.adv-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* Картки */
+.adv-grid div {
+    background: white;
+    padding: 25px;
+    width: 280px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-top: 5px solid orange;
+
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+
+    transition: 0.3s;
+}
+
+/* Ефект при наведенні */
+.adv-grid div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.img{
+    width: 15%;
+}
+
+
+
+footer {
+    background-color: black; 
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: orange; 
+}
+
+.footer-section p, .footer-section a {
+    margin: 0;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.add-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: orange;
+    color: black;
+    border: none;
+    cursor: pointer;
+    text-decoration: none; /* важливо для <a> */
+    transition: 0.2s;
+}
+
+.add-btn:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   АКЦІЇ
+========================= */
+.promo {
+    background: white;
+}
+
+.promo-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.promo-card {
+    background: white;
+    padding: 25px;
+    width: 280px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-top: 5px solid orange;
+    transition: 0.3s;
+}
+
+.promo-card:hover {
+    transform: translateY(-8px);
+}
+
+/* =========================
+   ВІДГУКИ
+========================= */
+.reviews-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.review-card {
+    background: #f9f9f9;
+    padding: 25px;
+    width: 280px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    font-style: italic;
+}
+
+.review-card h4 {
+    margin-top: 15px;
+    color: orange;
+    font-style: normal;
+}
+
+/* =========================
+   РЕЙТИНГ У ХЕДЕРІ
+========================= */
+.header-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 18px;
+    margin: 0 20px;
+
+    background: rgba(255, 165, 0, 0.12);
+    border: 1px solid orange;
+    border-radius: 30px;
+
+    color: orange;
+    font-size: 18px;
+    font-weight: bold;
+
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.header-rating:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.35);
+}
+
+/* =========================
+   ІКОНКА КОШИКА
+========================= */
+.cart-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+    text-decoration: none;
+    color: white;
+
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Червоне коло з кількістю товарів */
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+
+    background: red;
+    color: white;
+
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   АДАПТИВНІСТЬ ДЛЯ ПЛАНШЕТІВ (до 992px)
+========================================= */
+@media (max-width: 992px) {
+
+    /* Хедер */
+    .header {
+        padding: 10px 20px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    /* Логотип */
+    .header img {
+        height: 65px;
+    }
+
+    /* Навігація */
+    .nav-list {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-list a {
+        font-size: 20px;
+        padding: 6px 12px;
+    }
+
+    /* Рейтинг */
+    .header-rating {
+        font-size: 16px;
+        padding: 6px 14px;
+        margin: 0 10px;
+    }
+
+    /* Іконка кошика */
+    .cart-icon {
+        font-size: 28px;
+        margin-left: 10px;
+    }
+
+    #cart-count {
+        width: 20px;
+        height: 20px;
+        font-size: 11px;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 380px;
+        padding: 30px 20px;
+    }
+
+    .taste {
+        font-size: 32px;
+    }
+
+    .taste1 {
+        font-size: 20px;
+    }
+
+    /* Секції */
+    section {
+        padding: 30px 20px;
+    }
+
+    /* Популярні страви */
+    .popular-grid {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 220px;
+    }
+
+    /* Переваги */
+    .adv-grid {
+        flex-wrap: wrap;
+        gap: 20px;
+        font-size: 18px;
+    }
+
+    /* Акції */
+    .promo-card {
+        width: 240px;
+    }
+
+    /* Відгуки */
+    .review-card {
+        width: 240px;
+    }
+}
+
+
+/* =========================================
+   АДАПТИВНІСТЬ ДЛЯ ТЕЛЕФОНІВ L (до 425px)
+========================================= */
+@media (max-width: 425px) {
+
+    /* Хедер */
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 15px 10px;
+        gap: 15px;
+    }
+
+    /* Логотип */
+    .header img {
+        height: 55px;
+        margin: 0 auto;
+    }
+
+    /* Навігація */
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-list a {
+        font-size: 20px;
+        padding: 8px 12px;
+        display: block;
+    }
+
+    /* Рейтинг */
+    .header-rating {
+        margin: 0;
+        font-size: 15px;
+        padding: 6px 12px;
+    }
+
+    /* Іконка кошика */
+    .cart-icon {
+        font-size: 30px;
+        margin-left: 0;
+    }
+
+    #cart-count {
+        top: -6px;
+        right: -8px;
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 320px;
+        padding: 20px 15px;
+    }
+
+    .taste {
+        font-size: 26px;
+        line-height: 1.3;
+    }
+
+    .taste1 {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    /* Кнопки */
+    .btn,
+    .add-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    /* Секції */
+    section {
+        padding: 25px 15px;
+    }
+
+    /* Картки */
+    .popular-grid,
+    .promo-grid,
+    .reviews-grid,
+    .adv-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card,
+    .promo-card,
+    .review-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* Футер */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

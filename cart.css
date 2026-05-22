@@ -1,0 +1,716 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* менша висота хедера */
+    padding: 10px 30px;
+
+    background: black;
+    color: white;
+}
+
+/* Логотип-картинка */
+.header img {
+    height: 80px;      /* розмір логотипа */
+    width: auto;
+    display: block;
+}
+
+/* Меню */
+.nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Посилання */
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+
+    /* внутрішні відступи для красивого hover */
+    padding: 8px 14px;
+
+    transition: 0.3s;
+}
+
+/* Гарний ефект при наведенні */
+.nav-list a:hover {
+    background: orange;
+    color: black;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 165, 0, 0.4);
+}
+
+/* Активне натискання */
+.nav-list a:active {
+    transform: scale(0.95);
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+    background: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836")
+        center/cover no-repeat;
+    color: white;
+    text-align: center;
+
+    /* Менша висота hero */
+    min-height: 450px;
+
+    /* Центрування тексту */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+/* Текст всередині hero */
+.hero-content {
+    max-width: 700px;
+}
+
+.taste {
+    font-size: 40px;
+}
+
+.taste1 {
+    font-size: 24px;
+}
+
+/* =========================
+   КНОПКА
+========================= */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 28px;
+    background: orange;
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+
+
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+
+
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: orange;
+}
+
+.footer-section p,
+.footer-section a {
+    margin: 0;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+.cart-container {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+}
+
+
+.checkout-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: orange;
+    border: none;
+    font-size: 18px;
+}
+
+/* =======================
+   МОДАЛКА ПО ЦЕНТРУ
+======================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+
+    /* затемнення фону */
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(6px);
+
+    /* центрування */
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    z-index: 1000;
+}
+
+/* Коли модалка відкривається через JS */
+.modal[style*="block"] {
+    display: flex !important;
+}
+
+/* Вікно */
+.modal-content {
+    background: linear-gradient(145deg, #ffffff, #fff8ef);
+    width: 100%;
+    max-width: 450px;
+    padding: 40px 35px;
+    border-radius: 28px;
+    text-align: center;
+
+    border: 3px solid rgba(255, 165, 0, 0.25);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.25),
+        0 10px 30px rgba(255, 165, 0, 0.25);
+
+    animation: modalShow 0.45s ease;
+}
+
+/* Заголовок */
+.modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 30px;
+    font-weight: 800;
+    color: #111;
+}
+
+/* Поля */
+.modal input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 18px;
+    margin-bottom: 15px;
+
+    border: 2px solid #ececec;
+    border-radius: 14px;
+
+    font-size: 16px;
+    background: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.modal input:focus {
+    border-color: orange;
+    box-shadow: 0 0 0 4px rgba(255, 165, 0, 0.15);
+}
+
+
+/* =======================
+   КНОПКИ + -
+======================= */
+
+.qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty-controls span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* мінус */
+.qty-controls .minus {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* плюс */
+.qty-controls .plus {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* ефекти */
+.qty-controls button:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.qty-controls button:active {
+    transform: scale(0.95);
+}
+
+
+/* =======================
+   КНОПКА ПІДТВЕРДИТИ
+======================= */
+
+/* Кнопка */
+#confirm-order {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+
+    border: none;
+
+    background: linear-gradient(135deg, #ffb300, #ff8c00);
+    color: #111;
+
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+
+    box-shadow: 0 10px 25px rgba(255, 165, 0, 0.35);
+    transition: 0.3s;
+}
+
+#confirm-order:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(255, 165, 0, 0.45);
+}
+
+#confirm-order:active {
+    transform: scale(0.98);
+}
+
+/* Анімація */
+@keyframes modalShow {
+    from {
+        opacity: 0;
+        transform: scale(0.85) translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+
+/* =======================
+   ТРОХИ КРАСИ ДЛЯ КНОПКИ ОПЛАТИ
+======================= */
+
+.checkout-btn {
+    background:orange;
+    color: black;
+    transition: 0.3s;
+}
+
+.checkout-btn:hover {
+    transform: scale(1.05);
+}
+
+
+/* =======================
+   ФІКС ФУТЕРА (липне вниз)
+======================= */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* головний контент сторінки */
+main, .cart-page {
+    flex: 1;
+}
+
+/* =======================
+   ЗАГАЛЬНА СУМА
+======================= */
+
+
+
+/* Якщо хочеш красивіший вигляд */
+#total-price {
+    text-align: center;
+    margin: 30px auto;
+    font-size: 32px;
+    font-weight: 700;
+    color: black;
+    padding: 15px 30px;
+    width: fit-content;
+}
+
+.header-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 18px;
+    margin: 0 20px;
+
+    background: rgba(255, 165, 0, 0.12);
+    border: 1px solid orange;
+    border-radius: 30px;
+
+    color: orange;
+    font-size: 18px;
+    font-weight: bold;
+
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.header-rating:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.35);
+}
+
+.cart-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+    text-decoration: none;
+    color: white;
+
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Червоне коло з кількістю товарів */
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+
+    background: red;
+    color: white;
+
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* =======================
+   КОШИК ПОРОЖНІЙ
+======================= */
+.empty-cart {
+    max-width: 650px;
+    margin: 60px auto;
+    padding: 50px 40px;
+    text-align: center;
+
+    background: linear-gradient(135deg, #ffffff, #fff8ef);
+    border: 3px solid orange;
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 50px rgba(255, 165, 0, 0.25),
+        0 10px 25px rgba(0, 0, 0, 0.08);
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* декоративне світіння */
+.empty-cart::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    left: -80px;
+    width: 180px;
+    height: 180px;
+    background: rgba(255, 165, 0, 0.15);
+    border-radius: 50%;
+}
+
+.empty-cart::after {
+    content: "";
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 220px;
+    height: 220px;
+    background: rgba(255, 140, 0, 0.12);
+    border-radius: 50%;
+}
+
+/* іконка */
+.empty-cart .empty-icon {
+    font-size: 90px;
+    margin-bottom: 20px;
+    display: block;
+    animation: floatCart 2.5s ease-in-out infinite;
+}
+
+/* заголовок */
+.empty-cart h2 {
+    margin: 0 0 15px;
+    font-size: 42px;
+    font-weight: 800;
+    color: black;
+    position: relative;
+    z-index: 1;
+}
+
+/* текст */
+.empty-cart p {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.7;
+    color: #555;
+    position: relative;
+    z-index: 1;
+}
+
+/* кнопка перейти в меню */
+.empty-cart .go-menu-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 35px;
+
+    background: linear-gradient(135deg, orange, #ff8c00);
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+
+    border-radius: 50px;
+    box-shadow: 0 10px 25px rgba(255, 165, 0, 0.35);
+
+    transition: 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.empty-cart .go-menu-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 16px 35px rgba(255, 165, 0, 0.45);
+}
+
+/* анімація */
+@keyframes floatCart {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* =========================
+   TABLET (до 992px)
+========================= */
+@media (max-width: 992px) {
+
+    .header {
+        padding: 10px 15px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .header img {
+        height: 65px;
+    }
+
+    .nav-list {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .nav-list a {
+        font-size: 20px;
+        padding: 6px 10px;
+    }
+
+    .hero {
+        min-height: 350px;
+        padding: 30px 15px;
+    }
+
+    .taste {
+        font-size: 32px;
+    }
+
+    .taste1 {
+        font-size: 20px;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    .cart-container {
+        max-width: 90%;
+    }
+
+    #total-price {
+        font-size: 26px;
+        padding: 12px 20px;
+    }
+}
+
+
+/* =========================
+   PHONE L (до 576px)
+========================= */
+@media (max-width: 576px) {
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .header img {
+        height: 55px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-list a {
+        font-size: 18px;
+    }
+
+    .hero {
+        min-height: 280px;
+        padding: 20px 10px;
+    }
+
+    .taste {
+        font-size: 24px;
+    }
+
+    .taste1 {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .cart-item img {
+        width: 100px;
+        height: 80px;
+    }
+
+    #total-price {
+        font-size: 22px;
+    }
+
+    .modal-content {
+        padding: 30px 20px;
+        border-radius: 22px;
+    }
+
+    .modal-content h2 {
+        font-size: 24px;
+    }
+
+    .modal input {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+     #confirm-order {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+}
